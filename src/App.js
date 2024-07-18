@@ -1,24 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
+import ProjectCard from './components/ProjectCard';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import { Description } from './components/Description';
 
 function App() {
+ 
+  const projects = [
+    {
+      title: "Kasa",
+      description: "Plateforme de location immobilière entre particuliers.",
+      repoLink: "/Kasa",
+      tags: ["React", "Front-end"],
+      backgroundImg:  "../assets/projets/kasa.png",
+    },
+    {
+      title: "ArgentBank",
+      description: "Application d'une nouvelle banque en ligne.",
+      repoLink: "/ArgentBank",
+      tags: ["React", "Redux", "Front-end"],
+      backgroundImg:  "../assets/projets/argentbank.png",
+    },
+    {
+      title: "Happy Sardines",
+      description: "Site de réservation pour un camping.",
+      repoLink: "link",
+      tags: ["PHP", "Javascript", "Full-stack"],
+      backgroundImg:  "../assets/projets/kasa.png",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+      <main>
+        <div className='main_container'>
+        <section id="about_container">
+          <About />
+        </section>
+        <Description />
+        <section id="projects_container">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </section>
+        </div>
+        <Contact />
+      </main>
+    </>
   );
 }
 

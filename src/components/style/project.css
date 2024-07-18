@@ -1,0 +1,23 @@
+.project_card {
+    flex: 1;
+}
+
+.project_img {
+    color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+}
+
+.hidden_project {
+    backdrop-filter: blur(8px);
+    height: 100%;
+    font-family: 'Space Mono', monospace;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
