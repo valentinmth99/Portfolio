@@ -1,4 +1,5 @@
 import React from 'react'
+import "./style/contact.css";
 
 export default function Contact() {
   const [result, setResult] = React.useState("");
@@ -18,8 +19,9 @@ export default function Contact() {
     const data = await response.json();
 
     if (data.success) {
-      setResult("Form Submitted Successfully");
+      setResult("Message envoyé, à très vite !");
       event.target.reset();
+      alert(`${result}`);
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -27,17 +29,18 @@ export default function Contact() {
   };
 
   return (
-    <div>
+    <div id="contact">
       <form onSubmit={onSubmit}>
+        <h1>Contactez-moi</h1>
+        <label for="name">Votre nom :</label>
         <input type="text" name="name" required/>
+        <label for="email">Votre mail :</label>
         <input type="email" name="email" required/>
+        <label for="message">Entrez votre message :</label>
         <textarea name="message" required></textarea>
-
-        <button type="submit">Submit Form</button>
-
+        <button className="contact_button" type="submit">Envoyer</button>
       </form>
       <span>{result}</span>
-
     </div>
   );
 }

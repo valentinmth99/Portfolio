@@ -1,5 +1,6 @@
 .project_card {
     flex: 1;
+    text-align: center;
 }
 
 .project_img {
@@ -11,13 +12,47 @@
 }
 
 .hidden_project {
-    backdrop-filter: blur(8px);
     height: 100%;
     font-family: 'Space Mono', monospace;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
 }
 
-a {
+.project_img:hover .hidden_project {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+}
+.hidden_project h2 {
+    margin: 0;
+    text-decoration: underline;
+}
+
+.project_card a {
     text-decoration: none;
+    color: black;
+}
+
+.project_tags {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+}
+.project_tag {
+    background: black;
+    padding: 7px;
+    border-radius: 15px;
+    border: 2px solid rgb(var(--background-rgb));
+}
+
+.project_description {
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 2rem;
     color: black;
 }
