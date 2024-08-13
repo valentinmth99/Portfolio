@@ -18,7 +18,7 @@ function App() {
       indication: 'Cliquez sur la carte pour accéder au site',
     },
     {
-      title: "ArgentBank",
+      title: "Argent Bank",
       description: "Application d'une nouvelle banque en ligne",
       repoLink: "/ArgentBank",
       tags: ["React", "Redux", "Front-end"],
@@ -31,7 +31,7 @@ function App() {
       repoLink: "link",
       tags: ["PHP", "Javascript", "Full-stack"],
       backgroundImg:  "../assets/projets/camping.png",
-      indication: 'Cliquez sur la carte pour accéder au repo',
+      indication: "Cliquez sur la carte pour voir le repo",
     },
   ];
   return (

@@ -1,10 +1,35 @@
+import { useInView } from "react-intersection-observer";
+import { useState, useEffect } from "react";
 import "./style/project.css";
 
-const ProjectCard = ({ title, description, repoLink, indication, backgroundImg, tags }) => (
-  <div className="project_card">
+const ProjectCard = ({ title, description, repoLink, indication, backgroundImg, tags }) => 
+  { 
+  const { ref, inView } = useInView({
+    threshold: 1.0, // Déclenchement lorsque l'élément est 100% visible
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (inView) {
+      timeoutId = setTimeout(() => {
+        setIsVisible(true);
+      }, 1500); // Délai de 1.5 secondes
+    } else {
+      setIsVisible(false); // Réinitialiser si l'élément sort de la vue
+    }
+
+    return () => clearTimeout(timeoutId); // Nettoyer le timeout
+  }, [inView]);
+
+  return (
+  <div id="projects" className="project_card">
     <a href={repoLink} target="_blank" rel="noopener noreferrer">
       <div
-        className="project_img"
+      ref={ref}
+        className={`project_img ${isVisible ? 'scrolled' : ''}`}
         style={{
           backgroundImage: `url(${backgroundImg})`,
         }}
@@ -22,6 +47,6 @@ const ProjectCard = ({ title, description, repoLink, indication, backgroundImg, 
     <p className="project_clic">{indication}</p>
     <p className="project_description">{description}</p>
   </div>
-);
+)};
 
 export default ProjectCard;

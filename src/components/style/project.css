@@ -26,9 +26,18 @@
     opacity: 1;
     backdrop-filter: blur(8px);
 }
+
+@media screen and (max-width: 768px) {
+    .project_img.scrolled .hidden_project {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
+}
+
 .hidden_project h2 {
     margin: 0;
     text-decoration: underline;
+    text-shadow: #000 1px 0 5px;
 }
 
 .project_card a {
@@ -52,7 +61,20 @@
 }
 
 .project_description {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Lexend Deca', monospace;
     margin-top: 2rem;
     color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .project_img {
+        height: 250px;
+    }
+    .hidden_project h2 {
+        font-size: 20px;
+    }
+
+    .project_tag {
+        font-size: 15px;
+    }
 }

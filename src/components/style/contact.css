@@ -1,25 +1,17 @@
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-10px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+form {
+    width: auto;
+    /* height: min-content; */
+    
 }
 
 #contact {
-    width: 30vw;
+    width: 40vw;
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    /* transform: translatey(0px);
-    animation: float 6s ease-in-out infinite; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
     border-radius: 15px;
 }
 
@@ -30,24 +22,27 @@
     text-align: center;
 }
 
-form {
+.contact_submit {
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
     border: 1px solid rgb(131, 151, 136);
     padding: 2.5rem;
     border-radius: 15px;
+    z-index: 1;
+    position: relative;
 }
 
 label {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Lexend Deca', monospace;
     color: black;
+    margin: 1.5vh 0;
 }
 
 input, textarea {
     background-color: inherit;
     color: black;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Lexend Deca', monospace;
     border: none;
     border-radius: 50px;
     box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
@@ -55,11 +50,11 @@ input, textarea {
 }
 
 input {
-    min-height: 5vh;
+    min-height: 30px;
 }
 
 textarea {
-    min-height: 10vh;
+    min-height: 60px;
     border-radius: 0px;
     padding-top: 10px;
 }
@@ -87,4 +82,18 @@ input:focus, textarea:focus {
 
 .contact_button:hover {
     cursor: pointer;
+}
+
+.result_form {
+    color: black;
+    font-size: larger;
+    font-family: 'Space Mono', monospace;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        width: 55vw;
+    }
 }
