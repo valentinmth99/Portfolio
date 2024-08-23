@@ -97,3 +97,9 @@ input:focus, textarea:focus {
         width: 55vw;
     }
 }
+
+@media screen and (max-width: 600px) {
+    #contact {
+        width: 75vw;
+    }
+}

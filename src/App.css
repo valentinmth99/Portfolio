@@ -149,6 +149,12 @@ section {
   border: 2px inset rgba(255, 255, 255, 0.18);
 }
 
+@media screen and (max-width:680px){
+  .about, .langages {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
 #arrow_prec,
 #arrow_next {
   position: absolute;
@@ -205,5 +211,11 @@ section {
   }
   #description_container {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .langage img {
+    width: 3.5rem;
   }
 }
