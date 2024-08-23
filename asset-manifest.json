@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.9f426e75.css",
-    "main.js": "/Portfolio/static/js/main.92c4576d.js",
-    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
-    "index.html": "/Portfolio/index.html",
-    "main.9f426e75.css.map": "/Portfolio/static/css/main.9f426e75.css.map",
-    "main.92c4576d.js.map": "/Portfolio/static/js/main.92c4576d.js.map",
-    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
+    "main.css": "https://valentinmth99.github.io/Portfolio/static/css/main.9f426e75.css",
+    "main.js": "https://valentinmth99.github.io/Portfolio/static/js/main.3ba57906.js",
+    "static/js/453.1407b060.chunk.js": "https://valentinmth99.github.io/Portfolio/static/js/453.1407b060.chunk.js",
+    "index.html": "https://valentinmth99.github.io/Portfolio/index.html",
+    "main.9f426e75.css.map": "https://valentinmth99.github.io/Portfolio/static/css/main.9f426e75.css.map",
+    "main.3ba57906.js.map": "https://valentinmth99.github.io/Portfolio/static/js/main.3ba57906.js.map",
+    "453.1407b060.chunk.js.map": "https://valentinmth99.github.io/Portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f426e75.css",
-    "static/js/main.92c4576d.js"
+    "static/js/main.3ba57906.js"
   ]
 }
